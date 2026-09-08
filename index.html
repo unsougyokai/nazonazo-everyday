@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>1日1なぞなぞ</title>
+<style>
+  body {
+    font-family: "Yu Gothic", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+  }
+
+  h1 {
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  .question-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #666;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #555;
+  }
+
+  .answer {
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>今日のなぞなぞ</h1>
+
+<div class="question-box">
+  <div id="question"></div>
+  <button onclick="showAnswer()">答えを見る</button>
+  <div id="answer" class="answer"></div>
+</div>
+
+<script>
+  const riddles = [
+    { q: "パンはパンでも食べられないパンは？", a: "フライパン" },
+    { q: "家の中でいつも転がっているものは？", a: "玄関（げんかん）" },
+    { q: "叩くと痛いけど、叩かないと困るものは？", a: "ドア" },
+    { q: "上から読んでも下から読んでも同じ県は？", a: "奈良県" }
+  ];
+
+  const today = new Date();
+  const index = today.getDate() % riddles.length;
+
+  document.getElementById("question").textContent = riddles[index].q;
+
+  function showAnswer() {
+    document.getElementById("answer").textContent = riddles[index].a;
+    document.getElementById("answer").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
