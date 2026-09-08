@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>なぞなぞ1</title>
+<title>毎日なぞなぞ</title>
 <style>
   body {
     font-family: "Yu Gothic", sans-serif;
@@ -14,55 +14,60 @@
     line-height: 1.8;
   }
 
-  .question-box {
+  .logo-title {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #d86ca4;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.95em;
+  }
+
+  ul {
     background: #fff;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    list-style: none;
   }
 
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #666;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background: #555;
-  }
-
-  .answer {
-    display: none;
-    margin-top: 20px;
-    font-weight: bold;
+  li {
+    margin: 12px 0;
   }
 
   a {
     color: #d86ca4;
     text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
 <body>
 
-<a href="index.html">← なぞなぞ一覧に戻る</a>
+<div class="logo-title">毎日なぞなぞ</div>
 
-<div class="question-box">
-  <h2>パンはパンでも食べられないパンは？</h2>
-
-  <button onclick="showAnswer()">答えを見る</button>
-  <div id="answer" class="answer">フライパン</div>
+<div class="subtitle">
+  ピンク色の眼鏡をかけた2足歩行のぞう、<strong>なぞなぞうさん</strong>が  
+  あなたにたくさんの「なぞなぞ」をお届けします。
 </div>
 
-<script>
-  function showAnswer() {
-    document.getElementById("answer").style.display = "block";
-  }
-</script>
+<ul>
+  <li><a href="riddle1.html">パンはパンでも食べられないパンは？</a></li>
+  <li><a href="riddle2.html">家の中でいつも転がっているものは？</a></li>
+  <li><a href="riddle3.html">叩くと痛いけど、叩かないと困るものは？</a></li>
+  <li><a href="riddle4.html">上から読んでも下から読んでも同じ県は？</a></li>
+</ul>
 
 </body>
 </html>
