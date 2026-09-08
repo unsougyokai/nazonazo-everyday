@@ -2,34 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>毎日なぞなぞ</title>
+<title>なぞなぞ1</title>
 <style>
   body {
     font-family: "Yu Gothic", sans-serif;
-    background: #f9f3f5; /* なぞなぞうさんの世界観に合わせて淡いピンク */
+    background: #f9f3f5;
     color: #333;
     padding: 40px;
     max-width: 650px;
     margin: auto;
     line-height: 1.8;
-  }
-
-  /* ロゴ風タイトル */
-  .logo-title {
-    font-size: 2.4em;
-    font-weight: bold;
-    color: #d86ca4; /* ピンク系でキャラクター性を表現 */
-    text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: 0.08em;
-  }
-
-  /* サブタイトル（なぞなぞうさん紹介） */
-  .subtitle {
-    text-align: center;
-    color: #666;
-    margin-bottom: 40px;
-    font-size: 0.95em;
   }
 
   .question-box {
@@ -58,40 +40,26 @@
     margin-top: 20px;
     font-weight: bold;
   }
+
+  a {
+    color: #d86ca4;
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
 
-<!-- ロゴ風タイトル -->
-<div class="logo-title">毎日なぞなぞ</div>
-
-<!-- なぞなぞうさん紹介文 -->
-<div class="subtitle">
-  ピンク色の眼鏡をかけた2足歩行のぞう、<strong>なぞなぞうさん</strong>が<br>
-  毎日1問、あなたに「なぞなぞ」をお届けします。
-</div>
+<a href="index.html">← なぞなぞ一覧に戻る</a>
 
 <div class="question-box">
-  <div id="question"></div>
+  <h2>パンはパンでも食べられないパンは？</h2>
+
   <button onclick="showAnswer()">答えを見る</button>
-  <div id="answer" class="answer"></div>
+  <div id="answer" class="answer">フライパン</div>
 </div>
 
 <script>
-  const riddles = [
-    { q: "パンはパンでも食べられないパンは？", a: "フライパン" },
-    { q: "家の中でいつも転がっているものは？", a: "玄関（げんかん）" },
-    { q: "叩くと痛いけど、叩かないと困るものは？", a: "ドア" },
-    { q: "上から読んでも下から読んでも同じ県は？", a: "奈良県" }
-  ];
-
-  const today = new Date();
-  const index = today.getDate() % riddles.length;
-
-  document.getElementById("question").textContent = riddles[index].q;
-
   function showAnswer() {
-    document.getElementById("answer").textContent = riddles[index].a;
     document.getElementById("answer").style.display = "block";
   }
 </script>
