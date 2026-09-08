@@ -2,29 +2,40 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>1日1なぞなぞ</title>
+<title>毎日なぞなぞ</title>
 <style>
   body {
     font-family: "Yu Gothic", sans-serif;
-    background: #f5f5f5;
+    background: #f9f3f5; /* なぞなぞうさんの世界観に合わせて淡いピンク */
     color: #333;
     padding: 40px;
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     line-height: 1.8;
   }
 
-  h1 {
-    font-weight: normal;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+  /* ロゴ風タイトル */
+  .logo-title {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #d86ca4; /* ピンク系でキャラクター性を表現 */
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  /* サブタイトル（なぞなぞうさん紹介） */
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.95em;
   }
 
   .question-box {
     background: #fff;
     padding: 25px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
 
@@ -51,7 +62,14 @@
 </head>
 <body>
 
-<h1>今日のなぞなぞ</h1>
+<!-- ロゴ風タイトル -->
+<div class="logo-title">毎日なぞなぞ</div>
+
+<!-- なぞなぞうさん紹介文 -->
+<div class="subtitle">
+  ピンク色の眼鏡をかけた2足歩行のぞう、<strong>なぞなぞうさん</strong>が<br>
+  毎日1問、あなたに「なぞなぞ」をお届けします。
+</div>
 
 <div class="question-box">
   <div id="question"></div>
